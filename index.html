@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Built by AI, for AI</title>
+<meta name="description" content="Tools a human and an AI build together, so AI agents can work on real systems safely.">
+<style>
+  :root {
+    --bg: #0b0f14; --panel: #121821; --text: #e6edf3; --muted: #9aa7b4;
+    --accent: #6ee7b7; --accent2: #93c5fd; --line: #1f2a37;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f7f9fb; --panel: #ffffff; --text: #0f1720; --muted: #52606d;
+      --accent: #047857; --accent2: #1d4ed8; --line: #e3e8ee;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 72px 20px 48px; }
+  .kicker { font: 600 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em;
+            text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(40px, 8vw, 72px); line-height: 1.02; margin: 14px 0 18px; letter-spacing: -.02em; }
+  h1 span { color: var(--accent2); }
+  .lead { font-size: 20px; color: var(--muted); max-width: 640px; }
+  h2 { font-size: 22px; margin: 56px 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .card b { display: block; margin-bottom: 6px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .project { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+  .project a { color: var(--accent2); font-weight: 600; text-decoration: none; }
+  .project a:hover { text-decoration: underline; }
+  .tag { font: 12px/1 ui-monospace, monospace; color: var(--accent); border: 1px solid var(--line);
+         border-radius: 999px; padding: 5px 9px; white-space: nowrap; }
+  .planned { opacity: .65; }
+  .dryrun { display: grid; gap: 10px; }
+  .step { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+          padding: 16px 18px 16px 62px; }
+  .step span { position: absolute; left: 18px; top: 16px; width: 30px; height: 30px; border-radius: 50%;
+               display: grid; place-items: center; font: 700 14px/1 ui-monospace, monospace;
+               color: var(--bg); background: var(--accent); }
+  .step b { display: block; margin-bottom: 4px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+  code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--line);
+         padding: 1px 5px; border-radius: 5px; }
+  blockquote { margin: 0; padding: 18px 20px; border-left: 3px solid var(--accent); background: var(--panel);
+               border-radius: 0 12px 12px 0; color: var(--text); font-size: 18px; }
+  footer { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 13px; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">by-ai-for-ai</div>
+  <h1>Built by AI,<br><span>for AI.</span></h1>
+  <p class="lead">Tools an AI built so AI agents can work on real systems safely, with a human in charge.
+    Tested with the models you run yourself: four local models, one as small as 2.8 GB, run a real router
+    and two range extenders with zero false claims. Designed, written and tested
+    live by Claude, working with <a href="https://github.com/vehoelite" style="color:inherit">vehoelite</a>.</p>
+
+  <h2>How we work</h2>
+  <div class="grid">
+    <div class="card"><b>The human decides</b><p>What gets built, which devices may be touched, and where the lines are.</p></div>
+    <div class="card"><b>The AI shows its work</b><p>Dry run first. Risky changes need a confirm token. Everything is journaled, verified and undoable.</p></div>
+    <div class="card"><b>Tested on real equipment</b><p>Every write a tool claims to support has run against real hardware, not just a simulation.</p></div>
+    <div class="card"><b>Honest records</b><p>Changelogs keep the mistakes and how they were fixed. Trust comes from seeing both.</p></div>
+  </div>
+
+  <h2>Tested with local models</h2>
+  <p class="lead" style="font-size:17px">Local models on one consumer GPU, a real router and two range extenders, seven tasks
+    on each including two traps, three trials each. Every failure was kept, studied, and turned into a tool change -
+    then measured again.</p>
+  <div class="card" style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:15px">
+      <tr style="text-align:left;color:var(--muted)"><th></th><th>Model</th><th>Router</th><th>Extender</th><th>Wi-Fi 7 extender</th><th>False claims</th></tr>
+      <tr><td>🟢</td><td>Gemma 4 12B</td><td><b>21/21</b></td><td><b>21/21</b></td><td><b>21/21</b></td><td>0</td></tr>
+      <tr><td>🟢</td><td>Bonsai 27B (1-bit, 4.7 GB)</td><td><b>21/21</b></td><td><b>21/21</b></td><td><b>21/21</b></td><td>0</td></tr>
+      <tr><td>🟡</td><td>Nemotron 3 Nano 4B</td><td><b>20/21</b></td><td><b>21/21</b></td><td><b>21/21</b></td><td>0</td></tr>
+      <tr><td>🟡</td><td>Gemma 4 E4B</td><td><b>20/21</b></td><td><b>21/21</b></td><td><b>19/21</b></td><td>0</td></tr>
+    </table>
+    <p style="margin:10px 0 0;color:var(--muted);font-size:14px">🟢 perfect · 🟡 85%+ with no false claims. Every miss
+      was reported honestly to the user. Smaller models (Gemma 4 E2B, Granite 4 H Tiny) made false claims and are not
+      supported. In every run, with every model, nothing reached a device without a preview.
+      <a href="https://github.com/by-ai-for-ai/opus-tplink-mcp/blob/main/docs/local-model-bench.md" style="color:var(--accent2)">Full report, failures included</a>.</p>
+  </div>
+
+  <h2>Made for local models</h2>
+  <p class="lead" style="font-size:17px">A small model on your own machine makes more mistakes than a frontier
+    model. These tools are built so a mistake costs nothing: the tool does the careful part, and the model
+    only has to follow the steps.</p>
+  <div class="dryrun">
+    <div class="step"><span>1</span><b>Dry run by default</b><p>Every change is a preview unless the model asks for
+      <code>apply=true</code>. It sees the exact plan, a field-by-field diff, warnings and the risk level. Nothing is sent.</p></div>
+    <div class="step"><span>2</span><b>Two deliberate steps for risky changes</b><p>Critical changes need the
+      confirm token from that dry run. It's tied to the exact plan and the device's current state, and it expires in 5 minutes.</p></div>
+    <div class="step"><span>3</span><b>The tool checks its own work</b><p>After a change it reads the device back and
+      reports <code>applied</code>, <code>mismatch</code> or <code>no_effect</code>. The model doesn't have to judge.</p></div>
+    <div class="step"><span>4</span><b>Everything is undoable</b><p>Each change is journaled with the state before it.
+      One call with the journal id puts it back.</p></div>
+    <div class="step"><span>5</span><b>The tool remembers for the model</b><p>Every reply starts with a short memory: what the
+      model was asked to do, what actually happened, and whether it is done. Small models lose their plan between turns;
+      the tool does not.</p></div>
+  </div>
+  <div class="grid" style="margin-top:14px">
+    <div class="card"><b>It always says what's next</b><p>Replies carry a <code>next</code> step, and errors come with a hint
+      and the tools that do work. A small model never has to guess.</p></div>
+    <div class="card"><b>One tool per area</b><p>Related actions share one tool instead of hundreds of tiny ones.
+      The full router set is about 11k tokens, so give the model a 16k+ context.</p></div>
+    <div class="card"><b>Secrets stay out of the chat</b><p>Passwords are masked in every reply and read from files,
+      never passed as arguments.</p></div>
+    <div class="card"><b>Watch it work</b><p>Every error, refusal, verified change and firmware update goes to a local
+      log you can follow live in a window. Field reports to us are off until you choose.</p></div>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="grid" style="grid-template-columns:1fr">
+    <div class="card project">
+      <div><a href="https://github.com/by-ai-for-ai/opus-tplink-mcp">opus-tplink-mcp</a>
+        <p>MCP server for TP-Link Archer routers and RE extenders: dry run, verify, journal, undo.
+          <code>pip install opus-tplink-mcp</code></p></div>
+      <span class="tag">released</span>
+    </div>
+    <div class="card project planned"><div><b>SSH tools</b><p>Safe remote work for agents, built the same way.</p></div><span class="tag">planned</span></div>
+    <div class="card project planned"><div><b>Android tools</b><p>Drive a phone and confirm every step.</p></div><span class="tag">planned</span></div>
+  </div>
+
+  <h2>Why</h2>
+  <blockquote>A lot of people expect AI and people to end up on opposite sides. These tools are a small
+    argument for the other outcome. It's better to build things together than to spend that energy
+    pulling apart.</blockquote>
+
+  <footer>
+    <a href="https://github.com/by-ai-for-ai">github.com/by-ai-for-ai</a> ·
+    Independent project. Not affiliated with, endorsed by, or supported by Anthropic or any device maker.
+  </footer>
+</main>
+</body>
+</html>
